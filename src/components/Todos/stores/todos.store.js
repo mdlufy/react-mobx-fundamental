@@ -24,12 +24,6 @@ class Todo {
        todoItem.completed = !todoItem.completed
     }
     
-    getTodoItemById(todoId) {
-        todoId = Number(todoId)
-
-        return this.todos.find(todoItem => todoItem.id === todoId)
-    }
-
     // in Redux:
     // completeTodo(id) {
     //     this.todos = this.todos.map((todoItem) =>
@@ -38,6 +32,13 @@ class Todo {
     //             : todoItem
     //     );
     // }
+
+    getTodoItemById(todoId) {
+        todoId = Number(todoId)
+
+        return this.todos.find(todoItem => todoItem.id === todoId)
+    }
+
 
     fetchTodos() {
         fetch("https://jsonplaceholder.typicode.com/todos")

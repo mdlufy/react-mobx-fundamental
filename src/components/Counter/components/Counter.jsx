@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 import '../../App.css';
-import counterStore from './stores/counter.store';
+import counterStore from '../stores/counter.store';
 
 const Counter = observer(() => {
     return (
